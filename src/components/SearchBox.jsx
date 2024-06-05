@@ -27,7 +27,6 @@ const SearchBox = ({ setResults }) => {
       );
       const results = await response.json();
 
-      console.log(results);
       setResults(results);
     } catch (error) {
       console.error("Error fetching search results:", error);
