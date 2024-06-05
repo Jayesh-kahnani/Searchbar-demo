@@ -1,33 +1,158 @@
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.search {
+  display: block;
+  width: 60%;
+  height: max-content;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.form {
+  box-shadow: 0px 0px 30px 0px #0000001A;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.result-box {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(275.41deg, #d5e7e6 -27.33%, #ffffff 46.85%);
+  margin-top: 45px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px #0000001A;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.left-box{    width: 29%;
+    margin: 0.5em;
+    margin-right: 4.5%;
+
+}
+.row-1-salt{
+font-weight:bolder;
+font-size: large;
+height: fit-content;
+margin-bottom: 0.5em;
+overflow-wrap: break-word;
+text-align: center;
+flex-wrap: wrap;
+}
+.row-2-salt{
+height: fit-content;
+}
+
+
+.center-box{ 
+  margin-right: 0.75em;
+  max-width: 35%;
+  min-width: 35%;
+justify-content: center;  
+text-align: center;
+align-self: center;
+flex-grow: 0.5;
+}
+
+.buttons{ margin: 0.35em;
+  margin-bottom: 0.5em;
+margin-top: 0.35em;
+}
+.button-box{
+display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+    position: relative;
+}
+
+.parent {
+    width: 65%;
+    height: fit-content;
+}
+.form-text {padding: 5px 10px 5px 10px;
+}
+
+
+
+.selected {
+  /* available and selected */
+  border: 2.5px solid #112d31;
+  box-shadow: 0px 0px 11.54px 0px #00c5a166;
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.not-selected {
+  /* available and not selected */
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 2px solid #ababab;
+  height: fit-content;
+}
+
+.not-av-not-selected {
+  /* not available and not selected */
+ 
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+ 
+  border: 1.5px dashed #555555;
+  color: #555555;
+
+}
+
+.not-av-selected {
+  /* not available but selected */
+ 
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+ 
+  border: 2.5px dashed #112d31;
+}
+
+.price {
+  margin-left: 1em;
+color: #112D31;
+font-weight: 900;
+font-size: 2em;
+    text-align: center;
+padding: 1em;   
+}
+
+.no-store {
+    border: 1px solid #A7D6D4;
+    background-color: #fff;
+padding: 1em;   
+ font-size: medium;
+    text-align: center;
+    width: 77%;
+}
+
+.more {
+  color: #204772;
+  position: relative;
+  left: 3.1%;
+}
+
+/* Additional CSS for More functionality */
+.hidden-row {
+  display: none; /* Hide rows initially */
+}
+
+.right-box{display: flex;
+justify-content: center;
+align-items: center; }
+.discounts{
+
+      color: rgb(136, 136, 136);
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+
 }
